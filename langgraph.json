@@ -1,0 +1,6 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "product_advisor": "./main.py:graph"
+  }
+}

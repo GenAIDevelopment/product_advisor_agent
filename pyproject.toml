@@ -8,5 +8,6 @@ dependencies = [
     "langchain>=1.4.1",
     "langchain-google-genai>=4.4.0",
     "langgraph>=1.2.11",
+    "langgraph-cli[inmem]>=0.4.31",
     "python-dotenv>=1.2.3",
 ]
