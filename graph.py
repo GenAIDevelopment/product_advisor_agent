@@ -19,8 +19,8 @@ def create_graph() -> StateGraph:
     """
     state_graph = StateGraph(AdvisorState)
     state_graph.add_node("assistant", assistant)
-    state_graph.add_node("tools", get_tool_node)
-    state_graph.add_node("capture", capture_customer_info)
+    state_graph.add_node("tools", get_tool_node())
+    #state_graph.add_node("capture", capture_customer_info)
 
     #todo: need to define right edges
     state_graph.add_edge(START, "assistant")
@@ -28,8 +28,9 @@ def create_graph() -> StateGraph:
         "assistant",
         tools_condition
     )
-    state_graph.add_edge("assistant", "capture")
-    state_graph.add_edge("capture", END)
+    state_graph.add_edge("tools", "assistant")
+    #state_graph.add_edge("assistant", "capture")
+    #state_graph.add_edge("capture", END)
     return state_graph
 
 
