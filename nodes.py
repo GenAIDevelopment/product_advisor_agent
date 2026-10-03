@@ -19,8 +19,8 @@ def assistant(state: AdvisorState):
         tools = all_tools
     )
     reply = llm_with_tools.invoke([SystemMessage(SYSTEM_PROMPT)] +  state['messages'])
-    state['messages'] = [ reply ]
-    return state
+    #state['messages'] = [ reply ]
+    return {'messages', [reply]}
 
 
 
